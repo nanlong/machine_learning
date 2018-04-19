@@ -86,4 +86,7 @@ fn test() {
 
   let distance = minkowski(&x, &y, 2.0);
   assert_eq!(distance, 3.1622777);
+
+  let distance = minkowski(&x, &y, 3.0);
+  assert_eq!(distance, 3.0365891);
 }
