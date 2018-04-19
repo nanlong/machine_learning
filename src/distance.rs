@@ -24,7 +24,7 @@ pub fn euclidean(mut x: &[f32], mut y: &[f32]) -> f32 {
     let x_len = x.len();
     let y_len = y.len();
     let end = x_len.min(y_len);
-    let mut euclidean = 0.0;
+    let mut distance = 0.0;
 
     // 长度不同时进行处理
     if x_len != y_len {
@@ -34,10 +34,10 @@ pub fn euclidean(mut x: &[f32], mut y: &[f32]) -> f32 {
 
     // 计算结果
     for i in 0..end {
-        euclidean = euclidean + (x[i] - y[i]).powf(2.0);
+        distance = distance + (x[i] - y[i]).powf(2.0);
     }
 
-    euclidean.sqrt()
+    distance.sqrt()
 }
 
 // 明氏距离
